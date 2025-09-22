@@ -1,0 +1,15 @@
+This directory contains screenshots and visual documentation for FootyForecast.
+
+Note: Screenshots were removed but can be recreated by running the application and taking new screenshots of:
+- GUI interface (create_league.png, loaded_league.png)
+- Analysis charts (correlations.png, importance.png, targets.png)
+- Model training (neuralnetwork.png, randomforest.png)
+- Evaluation results (evaluate.png, predictions.png)
+- Fixture parsing (fixtures.png)
+- Other features (leagues.png, stats.png, parameters.png, validation_analysis.png)
+
+To recreate screenshots:
+1. Run the application: python main.py
+2. Navigate through different features
+3. Take screenshots of each functionality
+4. Save them with the appropriate names in this directory

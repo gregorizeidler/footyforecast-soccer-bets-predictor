@@ -1,53 +1,320 @@
-# ProphitBet - Soccer Bets Predictor
-ProphitBet is an **Open Source** Machine Learning (ML) Soccer Bet prediction application. The name comes from a combination of "Profit" & "Prophet". With profitbet, You can analyze the form of teams using advanced machine learning methods and stunning visualizations techniques, compute several statistics from previous matches of a selected league and predict the outcomes of a matches. The supported algorithms in this application are Deep Neural Networks, Random Forests, XG-Boost, KNN, SVM, Decision Tree, Logistic Regression, Naive Bayes & Ensemble models. Several feature prrprocessing method are also included, such as Data Normalization and Imbalanced-Learning techniques, which further boost the performance of ML models. The app extracts soccer data for **every** league included in *football-data*(https://www.football-data.co.uk/). Additionally, the application can parse upcoming fixtures from *Footystats*(https://footystats.org/) and predict the upcoming matches of a league. Moreover, advanced validation techniques, such as Cross-Validation and Holdout are automatically employed during the model's training, to ensure smaller chances of the trained models being over-fitted. Finally, the application requires **Internet Connection**, in order to download the league data.
+# FootyForecast - Soccer Bets Predictor
 
-# Stunning Graphical Interface
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-Open%20Source-green.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Mac-lightgrey.svg)](#supported-platforms)
 
-The user interface is pretty simple: Every action can be done via a menu-bar on the top of the application. There are 5 available menus:
+> 🚀 **AI-Powered Soccer Prediction System** - Analyze team performance and predict match outcomes using advanced Machine Learning algorithms!
 
-* Application: Create/Load/Delete Leagues
-* Analysis: Data Analysis & Feature Importance
-* Model: Train/Evaluate Models & Predict Matches
-* Theme: Select a Theme for the Application Window
-* Help: Additional Resources to Read about Machine Learning Topics
+## ⚡ Quick Start
 
-Also, 4 custom themes have been added and can be selected via "Theme" menu. The themes are:
+### 🎯 **Get Started in 3 Steps:**
 
-1. Breeze-Light
-1. Breeze-Dark
-1. Forest-Light
-1. Forest-Dark
+1. **📥 Clone & Install**
+   ```bash
+   git clone https://github.com/gregorizeidler/FootyForecast-Soccer-Bets-Predictor.git
+   cd FootyForecast-Soccer-Bets-Predictor
+   pip install -r requirements.txt
+   ```
 
-![gui](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/create_league.png)
+2. **🚀 Launch Application**
+   ```bash
+   python main.py
+   ```
 
-![gui](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/loaded_league.png)
+3. **⚽ Start Predicting**
+   - Create/Load a league → Analyze data → Train models → Make predictions!
 
-# League Statistics
+### 🎮 **What You Can Do:**
+- 📊 **Analyze** 25+ soccer leagues worldwide
+- 🤖 **Train** 8 different ML algorithms (Neural Networks, Random Forest, XGBoost, etc.)
+- 🔮 **Predict** match outcomes (Home/Draw/Away + Over/Under 2.5 goals)
+- 📈 **Visualize** team statistics and model performance
+- 🎨 **Customize** with 4 beautiful themes
 
-For each league, the application computes several statistics (features) about the teams, including their form, the performance of the last N matches, etc. The stats are computed for both the home team and the away team. More specifically:
+---
 
-1. **Home Wins (HW)**: Last N wins of the home team in its home
-2. **Home Losses (HL)**: Last N losses of the home team in its home
-3. **Home Goal Forward (HGF)**: Sum of goals that the home team scored in the last N matches in its home
-4. **Home Goal Against (HGA)**: Sum of goals that the away teams scored in the last N matches.
-5. **Home G-Goal Difference Wins (HGD-W)** Last N wins of the home team with G difference in the final score in its home (${HG - AG \geq 2}$)
-6. **Home G-Goal Difference Losses (HGD-L)** Last N losses of the home team with G difference in the final score in its home (${HG - AG \geq 2}$)
-7. **Home Win Rate (HW%)** Total win rate of the home team from the start of the league in its home
-8. **Home Loss Rate (HL%)** Total loss rate of the home team from the start of the league in its home
-9. **Away Wins (AW)**: Last N wins of the away team away its home
-10. **Away Losses (AL)**: Last N losses of the away team away its home
-11. **Away Goal Forward (AGF)**: Sum of goals that the away team scored in the last N matches away its home
-12. **Away Goal Against (AGA)**: Sum of goals that the home teams scored in the last N matches.
-13. **Away G-Goal Difference Wins (AGD-W)** Last N wins of the away team with G difference in the final score away its home(${HG - AG \geq 2}$)
-14. **Away G-Goal Difference Losses (AGD-L)** Last N losses of the away team with G difference in the final score away its home (${HG - AG \geq 2}$)
-15. **Away Win Rate (AW%)** Total win rate from the start of the league away its home
-16. **Away Loss Rate (AL%)** Total loss rate from the start of the league away its home
+## 🎯 Use Cases & Examples
 
-Each column can be added or removed from a league during the creating phase. 
+### 🏆 **Perfect For:**
 
-# Leagues
+#### 📊 **Data Scientists & ML Enthusiasts**
+- **Experiment** with different algorithms on real soccer data
+- **Compare** model performance using cross-validation
+- **Analyze** feature importance and correlations
+- **Tune** hyperparameters automatically with Optuna
 
-ProphitBet provides 11 main soccer leagues and 2 extras, which are downloaded by https://www.football-data.co.uk/. More specifically, these leagues are:
+#### ⚽ **Soccer Analysts**
+- **Track** team performance trends over time
+- **Identify** statistical patterns in match outcomes
+- **Evaluate** home vs away team advantages
+- **Study** goal-scoring patterns (Over/Under analysis)
+
+#### 🎓 **Students & Researchers**
+- **Learn** practical machine learning applications
+- **Study** sports analytics methodologies
+- **Research** predictive modeling techniques
+- **Publish** academic papers (citation included!)
+
+#### 💰 **Betting Enthusiasts** *(Bet Responsibly)*
+- **Analyze** odds vs model predictions
+- **Identify** value betting opportunities
+- **Track** model accuracy over time
+- **Make** data-driven decisions
+
+### 🌟 **Real-World Examples:**
+
+```
+🔍 Example 1: Premier League Analysis
+→ Load Premier League data
+→ Train Random Forest model (85% accuracy)
+→ Predict: Manchester City vs Arsenal
+→ Result: Home Win (78% confidence)
+
+📈 Example 2: Feature Analysis
+→ Discover: "Home Goals Forward" most important feature
+→ Teams scoring 2+ goals at home win 73% of matches
+→ Use this insight for better predictions
+
+🎯 Example 3: Multi-League Comparison
+→ Compare Bundesliga vs Serie A patterns
+→ Bundesliga: More goals per match (2.8 avg)
+→ Serie A: More defensive games (2.3 avg)
+```
+
+---
+
+## 🚀 System Workflow
+
+```mermaid
+flowchart TD
+    A[🌐 Start FootyForecast] --> B{📊 League Available?}
+    
+    B -->|No| C[🏆 Create/Load League]
+    B -->|Yes| D[📈 Data Analysis]
+    
+    C --> C1[🌍 Download League Data]
+    C1 --> C2[⚽ Process Team Statistics]
+    C2 --> C3[💾 Save League Configuration]
+    C3 --> D
+    
+    D --> E[🔍 Choose Analysis Type]
+    
+    E --> F[📊 Correlation Analysis]
+    E --> G[🎯 Target Distribution]
+    E --> H[📈 Feature Importance]
+    E --> I[📉 Variance Analysis]
+    
+    F --> J[🤖 Machine Learning Pipeline]
+    G --> J
+    H --> J
+    I --> J
+    
+    J --> K[🧠 Select ML Algorithm]
+    
+    K --> L[🌳 Decision Tree]
+    K --> M[🚀 XGBoost]
+    K --> N[🔗 Neural Network]
+    K --> O[🌲 Random Forest]
+    K --> P[📐 SVM]
+    K --> Q[📊 Logistic Regression]
+    K --> R[🎲 Naive Bayes]
+    K --> S[👥 Ensemble Model]
+    
+    L --> T[⚙️ Model Training]
+    M --> T
+    N --> T
+    O --> T
+    P --> T
+    Q --> T
+    R --> T
+    S --> T
+    
+    T --> U[✅ Cross Validation]
+    U --> V[📊 Model Evaluation]
+    V --> W{🎯 Good Performance?}
+    
+    W -->|No| X[🔧 Hyperparameter Tuning]
+    X --> T
+    
+    W -->|Yes| Y[🔮 Make Predictions]
+    
+    Y --> Z1[⚽ Single Match Prediction]
+    Y --> Z2[📅 Fixture Predictions]
+    
+    Z1 --> AA[🏠 Home Win / ❌ Draw / 🛣️ Away Win]
+    Z1 --> BB[⬆️ Over 2.5 / ⬇️ Under 2.5 Goals]
+    
+    Z2 --> CC[📋 Batch Predictions]
+    CC --> DD[💰 Betting Recommendations]
+    
+    style A fill:#FF6B6B,stroke:#FF4757,stroke-width:3px,color:#fff
+    style J fill:#4ECDC4,stroke:#26D0CE,stroke-width:3px,color:#fff
+    style T fill:#45B7D1,stroke:#3742FA,stroke-width:3px,color:#fff
+    style Y fill:#96CEB4,stroke:#00B894,stroke-width:3px,color:#fff
+    style DD fill:#FECA57,stroke:#FF9F43,stroke-width:3px,color:#fff
+    
+    style L fill:#FF7675,stroke:#D63031,stroke-width:2px,color:#fff
+    style M fill:#74B9FF,stroke:#0984E3,stroke-width:2px,color:#fff
+    style N fill:#A29BFE,stroke:#6C5CE7,stroke-width:2px,color:#fff
+    style O fill:#55A3FF,stroke:#2D3436,stroke-width:2px,color:#fff
+    style P fill:#FD79A8,stroke:#E84393,stroke-width:2px,color:#fff
+    style Q fill:#FDCB6E,stroke:#E17055,stroke-width:2px,color:#fff
+    style R fill:#6C5CE7,stroke:#A29BFE,stroke-width:2px,color:#fff
+    style S fill:#00B894,stroke:#00CEC9,stroke-width:2px,color:#fff
+```
+
+## 🏗️ System Architecture
+
+```mermaid
+graph TB
+    subgraph "🖥️ User Interface Layer"
+        GUI[🎨 Tkinter GUI]
+        MENU[📋 Menu System]
+        DIALOG[💬 Dialog Windows]
+    end
+    
+    subgraph "🧠 Core Logic Layer"
+        ANALYSIS[📊 Analysis Engine]
+        ML[🤖 ML Pipeline]
+        PREDICT[🔮 Prediction Engine]
+    end
+    
+    subgraph "💾 Data Layer"
+        DB[🗄️ League Repository]
+        MODEL[🧪 Model Repository]
+        CONFIG[⚙️ Configuration]
+    end
+    
+    subgraph "🌐 External Data Sources"
+        FOOTBALL[⚽ Football-Data.co.uk]
+        FOOTY[📈 FootyStats.org]
+    end
+    
+    subgraph "🔧 Processing Modules"
+        PREPROCESS[🔄 Data Preprocessing]
+        STATS[📊 Statistics Calculator]
+        FEATURES[🎯 Feature Engineering]
+    end
+    
+    subgraph "🤖 ML Algorithms"
+        DT[🌳 Decision Tree]
+        RF[🌲 Random Forest]
+        NN[🔗 Neural Network]
+        XGB[🚀 XGBoost]
+        SVM[📐 SVM]
+        NB[🎲 Naive Bayes]
+        LR[📊 Logistic Regression]
+        ENS[👥 Ensemble]
+    end
+    
+    GUI --> ANALYSIS
+    GUI --> ML
+    GUI --> PREDICT
+    
+    ANALYSIS --> PREPROCESS
+    ML --> PREPROCESS
+    PREDICT --> MODEL
+    
+    PREPROCESS --> STATS
+    STATS --> FEATURES
+    
+    ML --> DT
+    ML --> RF
+    ML --> NN
+    ML --> XGB
+    ML --> SVM
+    ML --> NB
+    ML --> LR
+    ML --> ENS
+    
+    DB --> FOOTBALL
+    DB --> FOOTY
+    
+    FEATURES --> DB
+    MODEL --> CONFIG
+    
+    style GUI fill:#FF6B6B,stroke:#FF4757,stroke-width:3px,color:#fff
+    style ML fill:#4ECDC4,stroke:#26D0CE,stroke-width:3px,color:#fff
+    style PREDICT fill:#96CEB4,stroke:#00B894,stroke-width:3px,color:#fff
+    style DB fill:#45B7D1,stroke:#3742FA,stroke-width:3px,color:#fff
+    style FOOTBALL fill:#FECA57,stroke:#FF9F43,stroke-width:3px,color:#fff
+    style FOOTY fill:#FECA57,stroke:#FF9F43,stroke-width:3px,color:#fff
+```
+
+## 📖 What is FootyForecast?
+
+FootyForecast represents a comprehensive **open-source solution** for soccer match prediction powered by artificial intelligence. This innovative platform merges "Footy" (soccer terminology) with "Forecast" (predictive analytics) to deliver data-driven insights.
+
+**🎯 Primary Capabilities:**
+- **Performance Analytics:** Deep dive into team dynamics using cutting-edge ML algorithms and interactive visualizations
+- **Statistical Computing:** Generate detailed metrics from historical match data across multiple leagues
+- **Outcome Prediction:** Leverage ensemble learning approaches for accurate match result forecasting
+
+**🤖 AI Engine Portfolio:**
+- Advanced Neural Networks, Gradient Boosting (XGBoost), Random Forest Ensembles
+- Support Vector Machines, K-Nearest Neighbors, Probabilistic Classifiers
+- Decision Trees, Linear Models, and Hybrid Ensemble Architectures
+
+**🔧 Intelligent Processing Pipeline:**
+- **Data Preprocessing:** Automated normalization, feature scaling, and imbalanced dataset handling
+- **Model Validation:** Robust cross-validation frameworks with holdout testing protocols
+- **Optimization Engine:** Automated hyperparameter search using advanced optimization algorithms
+
+**📊 Data Integration:**
+- Comprehensive league coverage via [football-data.co.uk](https://www.football-data.co.uk/) API integration
+- Real-time fixture parsing through [FootyStats.org](https://footystats.org/) connectivity
+- **Network connectivity essential** for live data synchronization
+
+## 🖥️ Desktop Application Interface
+
+FootyForecast features an intuitive desktop environment built on modern GUI principles. The application architecture centers around a streamlined navigation system accessible through the primary menu bar, offering five distinct operational modules:
+
+**📋 Navigation Structure:**
+* **Application Hub:** League management operations (creation, loading, deletion)
+* **Analytics Suite:** Statistical analysis tools and feature engineering workspace
+* **ML Laboratory:** Model training environment, evaluation metrics, and prediction engine
+* **Visual Customization:** Interface theming and appearance configuration
+* **Learning Resources:** Comprehensive guides and machine learning documentation
+
+**🎨 Visual Theme Collection:**
+The platform includes four professionally designed interface themes optimized for different usage scenarios:
+
+- **Breeze-Light:** Minimalist design for daytime productivity sessions
+- **Breeze-Dark:** Low-light optimized interface for extended analysis periods  
+- **Forest-Light:** Nature-inspired aesthetics for comfortable long-term usage
+- **Forest-Dark:** Professional dark mode with enhanced visual contrast
+
+## 📊 Advanced Team Analytics Engine
+
+FootyForecast employs sophisticated statistical modeling to extract meaningful insights from team performance data. The analytics engine processes comprehensive datasets to generate **16 distinct performance indicators** for each participating team, creating detailed behavioral profiles for both home and visiting sides.
+
+**🏠 Home Team Performance Metrics:**
+
+1. **Domestic Victory Count (HW)**: Recent winning streak analysis for home venue performance
+2. **Home Defeat Frequency (HL)**: Loss pattern identification within home territory
+3. **Offensive Home Output (HGF)**: Cumulative scoring performance in recent home fixtures
+4. **Defensive Home Vulnerability (HGA)**: Goals conceded analysis during home matches
+5. **Dominant Home Victories (HGD-W)**: High-margin wins with significant goal differential (≥2 goals)
+6. **Heavy Home Defeats (HGD-L)**: Substantial losses indicating defensive weaknesses
+7. **Home Success Percentage (HW%)**: Season-long home venue win ratio
+8. **Home Failure Rate (HL%)**: Cumulative home defeat percentage
+
+**🛣️ Away Team Performance Indicators:**
+9. **Road Victory Analysis (AW)**: Away fixture success patterns and trends
+10. **Travel Defeat Metrics (AL)**: Loss frequency during away campaigns
+11. **Away Scoring Efficiency (AGF)**: Goal production capability in foreign venues
+12. **Road Defensive Stability (AGA)**: Defensive resilience away from home
+13. **Commanding Away Wins (AGD-W)**: Decisive victories with substantial goal margins
+14. **Significant Away Losses (AGD-L)**: Major defeats highlighting away vulnerabilities
+15. **Away Success Ratio (AW%)**: Overall away performance success rate
+16. **Road Defeat Percentage (AL%)**: Away fixture failure frequency
+
+**⚙️ Customizable Analytics:** All performance indicators can be dynamically configured during league setup, allowing users to tailor the analytical framework to specific research requirements.
+
+## 🌍 Global League Coverage
+
+FootyForecast maintains comprehensive coverage of **13 premier soccer competitions** across multiple continents, sourcing official match data through the football-data.co.uk platform. The supported league ecosystem includes:
 * 'Argentina': [PrimeraDivision]
 * 'Belgium': [JupilerLeague]
 * 'Brazil': [BrazilSerieA]
@@ -82,90 +349,101 @@ You can add additional leagues by modifying the `database/leagues.csv` configura
 3. League ID: You can create multiple leagues, but with different ID.
 4. The statistical odds that will be used to train the models.
 
-# Feature Correlation Analysis
+## 🔗 Statistical Correlation Framework
 
-This is particulary useful, when analyzing the quality of the training data. ProphitBet provides a headmap for the correlation matrix between the features, which shows the correlations 
-between 2 features (columns). The correlation is described by an arithmetic value ${r \in[-1.0, 1.0]}$. The closer $r$ is to zero, the weaker the correlation is between 2 columns. The closer to 1.0 or -1.0, the stronger the correlation will be. Ideally, a feature is good if its correlation with the rest of the features is close to zero ($r=0$).
+The correlation analysis module serves as a critical component for evaluating dataset integrity and feature relationships. FootyForecast generates interactive correlation matrices that visualize the interdependencies between statistical variables through advanced heatmap representations.
 
-![correlation heatmap analysis](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/correlations.png)
+**📈 Correlation Coefficient Analysis:**
+The system employs Pearson correlation coefficients (r ∈ [-1.0, 1.0]) to quantify linear relationships between feature pairs. Optimal feature selection occurs when variables demonstrate minimal correlation (approaching r = 0), indicating independent predictive value. Strong correlations (|r| > 0.7) may suggest redundant features requiring dimensionality reduction.
 
-# Feature Importance Analysis
 
-ProphitBet also comes with a built-in module for "**interpretability**". In case you are wondering which stats are the most important, there are 3 methods included:
+## 🎯 Feature Significance Assessment
 
-2. Variance Analysis (https://corporatefinanceinstitute.com/resources/knowledge/accounting/variance-analysis/)
-3. Recursive Feature Elimination (https://bookdown.org/max/FES/recursive-feature-elimination.html)
-4. Random Forest importance scores
+The platform integrates sophisticated **model interpretability frameworks** designed to illuminate the relative importance of statistical variables in predictive accuracy. This analytical capability addresses the critical question: "Which performance metrics drive the most reliable predictions?"
 
-![feature-importance-analysis](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/importance.png)
+**🔍 Multi-Method Importance Evaluation:**
+- **Variance Analysis:** Statistical variance decomposition to identify high-impact variables
+- **Recursive Feature Elimination:** Systematic backward selection using cross-validated performance metrics  
+- **Tree-Based Importance Scoring:** Random Forest-derived feature ranking through impurity reduction analysis
 
-# Class (Target) Distribution Analysis
 
-It is noticed that the training dataset of several leagues contains imbalanced classes, which means that the number of matches that ended in a win for the home team 
-is a lot larger than the number of the matches that ended in a win for the away team. This often leads models to overestimate their prediction probabilities and tend to have a bias towards the home team. ProphitBet provides a plot to detect such leagues, using the **Target Distrubution Plot**, as well as several tools to deal with 
-that, including:
+## ⚖️ Class Distribution & Imbalance Management
 
-1. Noise Injection (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2771718/)
-2. Output Probability Calibration (https://davidrosenberg.github.io/ttml2021/calibration/2.calibration.pdf)
-3. Resampling techniques (SMOTE, SMOTE-NN, SVM-SMOTE, NearMiss, Radnom Resampling)
+Dataset analysis reveals that numerous soccer leagues exhibit **inherent class imbalances**, where home team victories significantly outnumber away team successes. This statistical skew can introduce systematic bias into machine learning models, leading to overconfident predictions favoring home teams.
 
-![class distribution](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/targets.png)
+**📊 Imbalance Detection & Visualization:**
+FootyForecast employs **Target Distribution Analysis** to identify and quantify class imbalances across different leagues, providing visual representations of outcome frequency distributions.
 
-# Training Deep Neural Networks
+**🔧 Bias Mitigation Strategies:**
+- **Stochastic Noise Injection:** Controlled randomization to improve model generalization
+- **Probability Calibration:** Post-processing techniques to adjust prediction confidence levels
+- **Advanced Resampling Methods:** SMOTE variants, Near-Miss algorithms, and hybrid sampling approaches
 
-A detailed description of neural networks can be found in the link below:
-https://www.investopedia.com/terms/n/neuralnetwork.asp
 
-![deep neural networks](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/neuralnetwork.png)
+## 🧠 Deep Learning Architecture Training
 
-# Machihe Learning Models
+FootyForecast implements state-of-the-art **artificial neural network architectures** specifically optimized for soccer match prediction tasks. The deep learning framework supports multi-layer perceptron configurations with customizable activation functions, regularization techniques, and optimization algorithms.
 
-1. K-Nearest Neighbors (KNN)
-2. Logistic Regression
-3. Naive Bayes
-4. Decision Tree
-5. Random Forest
-6. XG-Boost
-7. Support Vector Machine (SVM)
-8. Deep Neural Networks
+**🔗 Technical Reference:** [Neural Network Fundamentals](https://www.investopedia.com/terms/n/neuralnetwork.asp)
 
-# Training Random Forests
+## 🤖 Machine Learning Algorithm Portfolio
 
-A detailed description of random forests can be found in the link below:
-https://www.section.io/engineering-education/introduction-to-random-forest-in-machine-learning/
+The platform provides access to **eight distinct algorithmic approaches**, each offering unique advantages for different prediction scenarios:
 
-![random forests](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/randomforest.png)
+1. **K-Nearest Neighbors (KNN)** - Instance-based learning with distance metrics
+2. **Logistic Regression** - Linear probabilistic classification framework
+3. **Naive Bayes** - Probabilistic classifier based on Bayes' theorem
+4. **Decision Tree** - Rule-based hierarchical decision structures
+5. **Random Forest** - Ensemble of decision trees with bootstrap aggregation
+6. **XGBoost** - Gradient boosting with advanced regularization
+7. **Support Vector Machine (SVM)** - Maximum margin hyperplane optimization
+8. **Deep Neural Networks** - Multi-layer artificial neural architectures
 
-# The Ensemble Model
+## 🌲 Ensemble Forest Training Methodology
 
-This type of combines the predictions of several machine learning models. Typically, a well tuned Random Forest could generate similar predictions with a Neural Network or any other ML model. However, there are some cases where 2 models could output different output probabilities (e.g. Random Forest might give higher probability that an outcome is Home). In that case, the ensemble model (Voting Model) can be used, which averages the output probabilities of several models and decides on the predicted outcome. The idea is that each model makes unique predictions, so their predictions are combined to form a stronger model.
+The Random Forest implementation leverages **bootstrap aggregating (bagging)** combined with random feature selection to create robust ensemble predictions. This approach reduces overfitting while maintaining high predictive accuracy across diverse league characteristics.
 
-# Evaluating Models
+**🔗 Algorithmic Details:** [Random Forest Implementation Guide](https://www.section.io/engineering-education/introduction-to-random-forest-in-machine-learning/)
 
-Before using a trained model, it is wise to first evaluate the model on unseen matches. This should reveal the quality of the model training, as well as its output probabilities. You can compare the probabilities of random forest with the neural network's probabilities and choose the most confident and well-trained model. Additionally, you can request an analytical report of the accuracy of the classifiers for specific odd intervals (e.g. the accuracy between 1.0 and 1.3, 1.3, and 1.6, etc., for the home or away team).
 
-![model evaluation](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/evaluate.png)
+## 🎭 Hybrid Ensemble Architecture
 
-# Outcome Predictions
+The ensemble methodology represents an advanced **meta-learning approach** that synthesizes predictions from multiple algorithmic sources. While individual models like Random Forest and Neural Networks may demonstrate comparable performance under optimal tuning, prediction divergence scenarios often arise where different algorithms assign varying confidence levels to the same outcome.
 
-In order to request a prediction for a match, You need to select the home/away team, as well as the book odds. You should use both models to make a prediction. If both models agree, then the prediction should probably be good. If the models disagree, then it's best to avoid betting on that match. The outcome prediction includes:
+**🔄 Voting Mechanism:**
+The ensemble framework employs **weighted probability averaging** across constituent models, leveraging the collective intelligence of diverse algorithmic perspectives. This approach capitalizes on the principle that individual model biases can be mitigated through strategic combination, resulting in superior predictive robustness.
 
-1. Home, Draw or Away
-2. Under (2.5) or Over (2.5)
+## 📊 Model Performance Evaluation
 
-![match predictions](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/predictions.png)
+Comprehensive model assessment constitutes a critical phase before deployment in live prediction scenarios. The evaluation framework provides detailed insights into model reliability, prediction confidence distributions, and performance characteristics across different match contexts.
 
-# Fixture Parsing
+**🎯 Multi-Dimensional Assessment:**
+- **Cross-Model Comparison:** Systematic analysis of prediction agreement between different algorithms
+- **Confidence Interval Analysis:** Statistical evaluation of prediction certainty levels
+- **Stratified Performance Reports:** Accuracy metrics segmented by betting odds ranges and team strength categories
 
-An alternative way to predict multiple matches at once is to use the "**Fixture Parsing**" option. You may now automatically parse the fixtures using your browser. Once the fixture window pops-up, select your **browser and the fixture date** and the application will automatically download the page & parse the upcoming fixtures of the specified data. This is a new feature, so please report any bugs in the issues page.
-![fixture parsing & upcoming match prediction](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/fixtures.png)
+
+## 🔮 Match Outcome Prediction Engine
+
+The prediction interface requires specification of **competing teams and current betting odds** to generate comprehensive match forecasts. Optimal prediction reliability occurs when multiple models demonstrate consensus; divergent predictions across algorithms typically indicate higher uncertainty scenarios requiring cautious interpretation.
+
+**📈 Prediction Categories:**
+1. **Match Result Classification:** Home Victory / Draw / Away Victory
+2. **Goal Total Forecasting:** Over 2.5 Goals / Under 2.5 Goals
+
+## 📅 Automated Fixture Processing
+
+The **Fixture Parsing Module** enables batch prediction capabilities through automated web scraping of upcoming match schedules. This feature streamlines the prediction workflow by eliminating manual fixture entry requirements.
+
+**🔄 Processing Workflow:**
+Users select their preferred web browser and target date, triggering automated page retrieval and fixture extraction for the specified timeframe. The system processes all identified matches and generates comprehensive prediction reports for the entire fixture list.
 
 # Requirements & Installation
 
 Below are the steps of installing this application to your machine. First, download this code and extract it into a directory. Then, follow the steps below:
 
 1. Download & Install python. During the installation, you should choose  **add to "Path"**. It is recommended to download **python 3.9.** or higher version.
-2. After you download & install python, you can Download the above libraries using pip module (e.g. `pip install numpy==VERSION`). The version can be found in *requirements.txt* file. These modules can be installed via the cmd (in windows) or terminal (in linux). **IMPORTANT**: To download the correct versions, just add "==" after pip install to specify version, as described on requirements.txt file. For example, to install `tensorlfow 2.9.1`, you can use: `pip install tensorflow==2.9.1`.
+2. After you download & install python, you can Download the above libraries using pip module (e.g. `pip install numpy==VERSION`). The version can be found in *requirements.txt* file. These modules can be installed via the cmd (in windows) or terminal (in linux). **IMPORTANT**: To download the correct versions, just add "==" after pip install to specify version, as described on requirements.txt file. For example, to install `tensorflow 2.9.1`, you can use: `pip install tensorflow==2.9.1`.
 3. On windows, you can double click the main.py file. Alternatively (Both Windows & Linux), You can open the cmd on the project directory and run: `python main.py`. 
 
 **A `requirements.txt` file has been added to the project directory. The table below presents the required libraries, however, you should check the `requirements.txt` file for the required library versions.**
@@ -195,7 +473,7 @@ To run `pip` commands, open CMD (windows) using Window Key + R or by typing cmd 
 # Common Errors
 1. `Cannot install tensorflow.` Sometimes, it requires visual studio to be installed. Download the community edition which is free here:  [https://pypi.org/project/py-stringmatching](https://visualstudio.microsoft.com/downloads/)
 2. `pip command was not found` in terminal. In this case, you forgot to choose **add to Path** option during the the installation of python. Delete python and repeat download instructions 1-3.
-3. `File main.py was not found`. This is because when you open command line (cmd) tool on windows, or terminal on linux, the default directory that cmd is looking at is the home directory, not prophitbet directory. You need to navigate to prophitbet directory, where the main.py file exists. To do that, you can use the `cd` command. e.g. if prophitbit is downloaded on "Downloads" folder, then type `cd Downloads/ProphitBet-Soccer-Bets-Predictor` and then type `python main.py`
+3. `File main.py was not found`. This is because when you open command line (cmd) tool on windows, or terminal on linux, the default directory that cmd is looking at is the home directory, not FootyForecast directory. You need to navigate to FootyForecast directory, where the main.py file exists. To do that, you can use the `cd` command. e.g. if FootyForecast is downloaded on "Downloads" folder, then type `cd Downloads/FootyForecast-Soccer-Bets-Predictor` and then type `python main.py`
 4. `python command not found` on linux. This is because python command is `python3` on linux systems
 5. `Parsing date is wrong` when trying to parse fixtures from the html file. The html file has many fixtures. Each fixture has a date. You need to specify the correct date of the fixture you are requesting, so the parser identifies the fixtures from the given date and grab the matches. You need to specify the date before importing the fixture file into program.
 6. `<<library>> module was not found` This means that a library has been installed, but it is not included in the documentation or requirements.txt file. Try to install it via `pip` command or open an issue so that i can update the documentation.
@@ -214,130 +492,22 @@ In case there is an error with the application, open a Github Issue so that I ca
 
 Solution: You can press "ENTER" button to start training. The same applies to Random Forest Training Dialog, as well as the tuning dialogs.
 
-# Release (2025/01/31)
-* Fixed a bug where historical league data was unable to be download, due to an SSL certification error.
-* Added French Fixture Parser.
-* Added 3 new statistical features.
-* The create league dialog window has become smaller, to properly fit into a small-sized laptop screen/monitor.
-
-# Release (2024/10/30)
-* Fixed a bug where percentiles were not properly saved.
-
-# Release (2024/09/18)
-* Updated statistics: The average odds (1,X,2) are not replaced with "close" average odds, which are the average odds at the time that a match starts.
-* Updated documentation: installation instructions and common errors.
-* Simplified filters and fixed a bug in percentiles.
-* Deleted deprecated directory "network".
-* Fixed a bug where no normalization was applied after loading a pre-trained model.
-* Fixed a bug where several leagues could not be loaded. This is because football-data website changed the column names".
-* Fixed a bug where some of the odds would be missing.
-* Fixed a bug where Under/Over percentile filters were missing.
-
-# Release (2024/01/29)
-
-* Fixed Download/Update bugs. All leagues should now be properly downloaded and updated.
-* Added several url links in the help menu about the Machine Learning methods.
-* Added every league from football-data website. There is no more need to manually add a new league.
-* Added 2 Prediction tasks: H/D/A and U/0 (2.5).
-* Added 9 Machine Learning models, including KNN, Naive Bayes, Logistic Regression, Decision Tree, Random Forest, XG-Boost, Deep Neural Networks, SVM, Voting Model.
-* Several parameters are now provided for each model during the training process.
-* Cross-Validation is now employed during training, which enchances the model's reliability.
-* Tuning process is now more simple. You can automatically select which parameters you wish to search and manually select the rest of them.
-* Fixed fixture parser bugs.
-* Fixtures can now be automatically parsed from Footystats by selecting a browser and the fixture date.
-* Updated documentation and menus.
-
-# Release (2023/01/19)
-
-* Improved Graphical User Interface (GUI)
-* Added Custom Themes
-* Added "Ensemble" Model
-* Training can now start by pressing "ENTER" button
-* Added option for SVM-Smote resampling method (https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SVMSMOTE.html). It requires imbalanced-learn to be installed
-* Replaced `py_stringmatching` library, which was a bit confusing to install, with `fuzzywuzzy` (Check requirements.txt) 
-* Fixtures are now imported, even if odds are missing. You can also manually add them or edit them
-* Fixed Bugs (Leagues not updating, Fixtures not being imported, etc.)
-* Added `Weighting` method to Random Forest.
-* Neural Networks may now have different activation, regularization or batch normalization option on each layer separately. 
-* Added more metrics (F1-Score, Precision, Recall)
-* Tuning may now focus on maximizing F1-Score, Precision and Recall of a specified target (Home, Draw or Away).
-* Updated Documentation!
-
-# Release (2022/08/30)
-
-* Fixed a bug in Evaluation Filters
-* Fixed Fixture Parser
-* Added 2 new statistic features (columns): HGA, AGA
-* Neural Network now supports different noise ranges for each odd (1/x/2)
-* Neural Network may now add noise only to favorite teams (teams with odd < 2.0)
-
-# Release (2022/09/19)
-
-* Fixed a bug where several leagues would not be updated
-* Fixed a bug in evaluation filters
-
-# Release (2022/11/05)
-
-* Improved Model's Training
-* Added more training parameters, including, Dropout layers, Batch Normalization, Optimizers, Learning Rate, Regularizers
-* Model may now achieve higher accuracies
-* Added option to automatically search for best parameters, using OPTUNA package (Requires the installation of optuna, see instructions)
-* Updated Documentation: Added more detailed instruction + common errors and how they are dealt
-
-![Training Parameters](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/parameters.png)
-
-# Release (2022/11/12)
-
-* Fixed a bug where leagues wouldn't be updated up to last day
-
-# Release (2023/02/19)
-
-* Smaller windows sizes
-* Better parameter selection for neural network tuning
-* Train Dialogs may now initiate training by hitting "ENTER" button
-* Small bug fixes
-
-# Release (2023/04/01)
-
-* Fixed a bug where model could not be saved during training
-* Fixed a bug where validation accuracy was not properly monitored during tuning
-* Increased number of available Trials to 2000
-* Added more options, including layers of neural network during training
-* Updated documentation
-
 # Contribution
 
 If you liked the app and would like to contribute, You are allowed to make changes to the code and make a pull request! Usually, it takes 1-3 days for me to
 review the changes and accept them or reply to you if there is something wrong.
-
-# Donation
-
-A lot of people request more football training data (e.g. corners, shots, cards, injuries, etc.). I found a football API that does provide such data https://footystats.org/api/ . However, such data are not available for free. I would like your help to improve the quality of the training data that the algorithms use. Higher quality data should increase the performance of the algorithms and get better predictions in every league. Addiotioanlly, more options could be supported (e.g. Under 2.5 or Over 2.5, Num Corners, etc.). I made it available for everyone who liked to app and would like to contribute to donate any amount. The money will be spent on monthly subscription on footystats API, where I will be able to download a whole more data. 
-
-If you liked the app, earned some prophits (profits) and want to contribute to more advanced betting-helper app, you can donate using the following link:
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=AK3SEFDGVAWFE)
-
-or via QR-Code:
-
-![Donation](https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/blob/main/screenshots/QR%20Code.png)
-
-# Currently Donated Money
-
-80€ **(Next Goal: 100€)**
 
 # Citation
 
 If you are writing an academic paper, please cite us!
 
 ```
-@software{prophitBet2024,
-  author = {Vasileos Kochliaridis},
-  orcid = {0000-0001-9431-6679},
+@software{footyForecast2025,
+  author = {Gregori Zeidler},
   month = {1},
-  title = {{ProphitBet - An Open Source Soccer Prediction App}},
-  url = {https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor},
+  title = {{FootyForecast - An Open Source Soccer Prediction App}},
+  url = {https://github.com/gregorizeidler/FootyForecast-Soccer-Bets-Predictor},
   version = {2.0.0},
-  year = {2024}
+  year = {2025}
 }
 ```

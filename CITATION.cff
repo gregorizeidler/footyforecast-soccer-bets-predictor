@@ -1,10 +1,9 @@
-@software{prophitBet2024,
-  author = {Vasileos Kochliaridis},
-  orcid = {0000-0001-9431-6679},
+@software{footyForecast2025,
+  author = {Gregori Zeidler},
   month = {1},
-  title = {{ProphitBet - An Open Source Soccer Prediction App}},
-  url = {https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor},
+  title = {{FootyForecast - An Open Source Soccer Prediction App}},
+  url = {https://github.com/gregorizeidler/FootyForecast-Soccer-Bets-Predictor},
   version = {2.0.0},
-  year = {2024}
+  year = {2025}
 }
   

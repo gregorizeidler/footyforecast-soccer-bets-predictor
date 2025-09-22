@@ -108,7 +108,7 @@ class MainApplicationWindow:
                 topic_menu.add_command(label=topic, command=lambda u=url: webbrowser.open(url=u))
             help_menu.add_cascade(label=help_topic, menu=topic_menu)
         help_menu.add_separator()
-        help_menu.add_command(label='Submit Bug', command=lambda: webbrowser.open(url='https://github.com/kochlisGit/ProphitBet-Soccer-Bets-Predictor/issues/new'))
+        help_menu.add_command(label='Submit Bug', command=lambda: webbrowser.open(url='https://github.com/gregorizeidler/FootyForecast-Soccer-Bets-Predictor/issues/new'))
         help_menu.add_command(label='Donate', command=lambda: webbrowser.open(url='https://www.paypal.com/donate/?hosted_button_id=AK3SEFDGVAWFE'))
         menubar.add_cascade(label='Help', menu=help_menu)
 

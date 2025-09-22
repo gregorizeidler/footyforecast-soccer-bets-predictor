@@ -42,7 +42,7 @@ samplers = ['None', 'Random-UnderSampling', 'Near-Miss', 'Random-OverSampling', 
 fit_test_size = 100
 
 # App Config
-app_title = 'Prophit-Bet (v2)'
+app_title = 'FootyForecast (v2)'
 themes_dict = {
     'Default': 'winnative',
     'forest-light': 'database/storage/themes/forest/forest-light.tcl',
@@ -52,8 +52,8 @@ themes_dict = {
 }
 help_url_links = {
     'About': {
-        'About Me': 'https://kochlisgit.github.io/aboutme/',
-        'More Applications': 'https://github.com/kochlisGit?tab=repositories'
+        'About Me': 'https://github.com/gregorizeidler',
+        'More Applications': 'https://github.com/gregorizeidler?tab=repositories'
     },
     'Machine Learning': {
         'ML vs SM': 'https://www.turintech.ai/machine-learning-vs-statistical-modelling-which-one-is-right-for-your-business-problem/',
