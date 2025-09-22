@@ -680,6 +680,496 @@ export OPENAI_MODEL="gpt-4"  # Optional, defaults to gpt-4
 
 ---
 
+# 💰 Betting Intelligence System
+
+FootyForecast features a comprehensive **Betting Intelligence System** with advanced portfolio management, risk analysis, and automated betting capabilities. This professional-grade system combines mathematical precision with AI-powered insights.
+
+## 🎯 **Core Betting Intelligence Modules**
+
+### 📊 **1. Portfolio Tracker**
+**Professional betting portfolio management with comprehensive analytics**
+
+```python
+from betting_intelligence import PortfolioTracker
+
+# Initialize portfolio tracker
+portfolio = PortfolioTracker("my_portfolio.json")
+
+# Add a bet
+bet_id = portfolio.add_bet(
+    match_info={'home_team': 'Manchester City', 'away_team': 'Arsenal', 'league': 'Premier League'},
+    bet_type='Home',
+    odds=1.85,
+    stake=50.0,
+    prediction_confidence=0.75,
+    bookmaker='Bet365'
+)
+
+# Settle bet
+portfolio.settle_bet(bet_id, 'won')
+
+# Get comprehensive analytics
+summary = portfolio.get_portfolio_summary()
+performance = portfolio.get_performance_by_category()
+monthly = portfolio.get_monthly_performance()
+```
+
+**📈 Key Features:**
+- **ROI Tracking:** Real-time return on investment calculation
+- **Win Rate Analysis:** Detailed win/loss statistics
+- **Category Performance:** Analysis by bet type, league, bookmaker
+- **Monthly Reports:** Time-based performance tracking
+- **Export Capabilities:** CSV export for external analysis
+- **Streak Analysis:** Winning/losing streak identification
+
+### 🎲 **2. Kelly Criterion Calculator**
+**Mathematically optimal bet sizing for maximum long-term growth**
+
+```python
+from betting_intelligence import KellyCalculator
+
+kelly = KellyCalculator()
+
+# Calculate optimal stake
+result = kelly.calculate_stake_amount(
+    bankroll=1000.0,
+    probability=0.65,
+    odds=2.1,
+    fractional_kelly=0.25  # Conservative quarter-Kelly
+)
+
+print(f"Recommended stake: ${result['recommended_stake_amount']:.2f}")
+print(f"Expected value: {result['expected_value']:.3f}")
+print(f"Should bet: {result['should_bet']}")
+
+# Analyze multiple opportunities
+opportunities = [
+    {'probability': 0.6, 'odds': 2.0},
+    {'probability': 0.7, 'odds': 1.8},
+    {'probability': 0.55, 'odds': 2.2}
+]
+
+multi_analysis = kelly.analyze_multiple_bets(opportunities, 1000.0)
+```
+
+**🎯 Advanced Features:**
+- **Fractional Kelly:** Conservative sizing options (1/4, 1/2, full Kelly)
+- **Multi-Bet Analysis:** Optimal allocation across opportunities
+- **Simulation Tools:** Monte Carlo performance simulation
+- **Comparison Tools:** Compare different Kelly fractions
+- **Risk Assessment:** Built-in risk warnings and recommendations
+
+### 🛡️ **3. Risk Management System**
+**Advanced risk controls and portfolio protection**
+
+```python
+from betting_intelligence import RiskManager
+
+risk_manager = RiskManager(
+    max_daily_risk=0.02,      # 2% max daily risk
+    max_single_bet_risk=0.01, # 1% max per bet
+    max_drawdown_limit=0.10   # 10% max drawdown
+)
+
+# Assess single bet risk
+risk_assessment = risk_manager.assess_bet_risk(
+    stake=50.0,
+    bankroll=1000.0,
+    probability=0.65,
+    odds=2.1
+)
+
+# Portfolio risk analysis
+portfolio_risk = risk_manager.analyze_portfolio_risk(
+    current_bets=active_bets,
+    bankroll=1000.0
+)
+
+# Drawdown monitoring
+drawdown_analysis = risk_manager.monitor_drawdown(
+    current_bankroll=950.0,
+    peak_bankroll=1000.0,
+    recent_performance=recent_bets
+)
+```
+
+**🔒 Risk Controls:**
+- **Position Sizing:** Automatic stake size limits
+- **Daily Risk Limits:** Maximum daily exposure controls
+- **Drawdown Protection:** Automatic stop-loss triggers
+- **Portfolio Diversification:** Risk distribution analysis
+- **Correlation Analysis:** Identify concentrated risks
+- **Real-time Monitoring:** Continuous risk assessment
+
+### 💎 **4. Arbitrage Detector**
+**Guaranteed profit opportunity identification**
+
+```python
+from betting_intelligence import ArbitrageDetector
+
+arbitrage = ArbitrageDetector(min_profit_threshold=0.01)
+
+# Detect arbitrage across bookmakers
+bookmaker_odds = {
+    'Bet365': {'Home': 2.1, 'Draw': 3.2, 'Away': 3.8},
+    'William Hill': {'Home': 2.0, 'Draw': 3.3, 'Away': 4.0},
+    'Pinnacle': {'Home': 2.15, 'Draw': 3.1, 'Away': 3.9}
+}
+
+arbitrage_result = arbitrage.detect_arbitrage_opportunity(bookmaker_odds)
+
+if arbitrage_result['arbitrage_exists']:
+    print(f"Guaranteed profit: {arbitrage_result['profit_percentage']:.2f}%")
+    print(f"Stake distribution: {arbitrage_result['stake_distribution']}")
+```
+
+**💰 Arbitrage Features:**
+- **Multi-Bookmaker Scanning:** Detect opportunities across platforms
+- **Optimal Stake Calculation:** Perfect profit distribution
+- **Margin Analysis:** Bookmaker competitiveness assessment
+- **Cross-Market Arbitrage:** Different market type opportunities
+- **Odds Movement Monitoring:** Track changing opportunities
+- **Bankroll Allocation:** Optimal capital distribution
+
+### 📈 **5. Advanced Analytics**
+**Deep performance analysis and pattern recognition**
+
+```python
+from betting_intelligence import AdvancedAnalytics
+
+analytics = AdvancedAnalytics()
+
+# Comprehensive streak analysis
+streak_analysis = analytics.analyze_streaks(betting_history)
+print(f"Current streak: {streak_analysis['current_streak']['type']} ({streak_analysis['current_streak']['length']})")
+
+# Seasonal performance patterns
+seasonal_analysis = analytics.analyze_seasonal_performance(betting_history)
+print(f"Best month: {seasonal_analysis['best_periods']['month']}")
+print(f"Best day: {seasonal_analysis['best_periods']['weekday']}")
+
+# League profitability analysis
+league_analysis = analytics.analyze_league_profitability(betting_history)
+
+# Bet type optimization
+bet_type_analysis = analytics.analyze_bet_type_optimization(betting_history)
+```
+
+**🔍 Analytics Capabilities:**
+- **Streak Analysis:** Win/loss pattern identification
+- **Seasonal Trends:** Performance by month, day, hour
+- **League Profitability:** ROI analysis by competition
+- **Bet Type Optimization:** Most profitable bet categories
+- **Performance Attribution:** Factor contribution analysis
+- **Predictive Insights:** Future performance indicators
+
+### 🤖 **6. Auto-Betting System**
+**Intelligent automated betting with queue management**
+
+```python
+from betting_intelligence import AutoBettingSystem, AutoBettingMode
+
+auto_betting = AutoBettingSystem(kelly, risk_manager, portfolio)
+
+# Configure system
+auto_betting.configure_system(
+    mode=AutoBettingMode.SEMI_AUTO,
+    bankroll=1000.0,
+    daily_profit_target=100.0,
+    daily_loss_limit=50.0,
+    max_concurrent_bets=3
+)
+
+# Add bet to queue
+queue_result = auto_betting.add_bet_to_queue(
+    match_info={'home_team': 'PSG', 'away_team': 'Marseille'},
+    bet_type='Home',
+    odds=1.7,
+    probability=0.72
+)
+
+# Start auto-execution
+auto_betting.start_auto_execution()
+```
+
+**⚡ Automation Features:**
+- **Smart Queue Management:** Prioritized bet execution
+- **Risk-Based Filtering:** Automatic opportunity screening
+- **Stop-Loss Automation:** Protective position closure
+- **Profit Target System:** Automatic profit taking
+- **Schedule Management:** Time-based bet execution
+- **Performance Monitoring:** Real-time system analytics
+
+### 🧠 **7. Advanced ML Model (50+ Features)**
+**State-of-the-art machine learning with comprehensive feature engineering**
+
+```python
+from betting_intelligence import AdvancedFootballModel
+
+model = AdvancedFootballModel()
+
+# Train with comprehensive features
+training_results = model.train_models(historical_match_data)
+print(f"Best model: {training_results['best_model']}")
+print(f"Features used: {training_results['features_count']}")
+
+# Feature importance analysis
+feature_analysis = model.get_feature_analysis()
+print("Top 5 features:")
+for feature, importance in feature_analysis['top_features'][:5]:
+    print(f"  {feature}: {importance['avg_importance']:.3f}")
+
+# Make predictions
+prediction = model.predict_match(match_data)
+print(f"Prediction: {prediction['prediction']}")
+print(f"Confidence: {prediction['confidence']:.3f}")
+```
+
+**🎯 Model Features (50+ Total):**
+
+**Team Performance (20 features):**
+- Recent form analysis (last 5 matches)
+- Season statistics (wins, draws, losses)
+- Home/away specific performance
+- Form difference calculations
+
+**Goal Statistics (15 features):**
+- Goals scored/conceded averages
+- Expected goals (xG) metrics
+- Attack/defense strength ratings
+- Goal difference analysis
+
+**Market & Odds (10 features):**
+- Bookmaker odds analysis
+- Implied probability calculations
+- Market efficiency indicators
+- Value betting identification
+
+**Head-to-Head (8 features):**
+- Historical matchup analysis
+- H2H win rates and patterns
+- Average goals in meetings
+- Over/under tendencies
+
+**Contextual Factors (12 features):**
+- League characteristics
+- Match importance scaling
+- Rest days and fatigue
+- Derby and cup match flags
+
+**Advanced Metrics (10+ features):**
+- Possession statistics
+- Shot accuracy rates
+- Defensive solidity
+- Card discipline metrics
+
+### 🎯 **8. Comprehensive Betting Analyzer**
+**Unified analysis combining all modules**
+
+```python
+from betting_intelligence import BettingAnalyzer
+
+analyzer = BettingAnalyzer()
+
+# Complete opportunity analysis
+analysis = analyzer.analyze_betting_opportunity(
+    opportunity=betting_opportunity,
+    bankroll=1000.0,
+    bookmaker_odds=multiple_bookmaker_odds
+)
+
+# Strategy optimization
+strategy = analyzer.optimize_betting_strategy(
+    opportunities=available_opportunities,
+    bankroll=1000.0,
+    strategy_type='balanced'  # conservative, balanced, aggressive
+)
+
+# Generate comprehensive report
+report = analyzer.generate_betting_report(
+    bankroll=1000.0,
+    opportunities=current_opportunities
+)
+```
+
+## 🔄 **Betting Intelligence Workflow**
+
+```mermaid
+graph TD
+    A[Match Data Input] --> B[Feature Engineering]
+    B --> C[Advanced ML Model]
+    C --> D[Prediction Generation]
+    
+    D --> E[Kelly Calculator]
+    E --> F[Risk Assessment]
+    F --> G[Portfolio Analysis]
+    
+    G --> H{Auto-Betting Mode?}
+    H -->|Manual| I[Manual Review]
+    H -->|Semi-Auto| J[Queue Management]
+    H -->|Full-Auto| K[Auto Execution]
+    
+    I --> L[Bet Placement]
+    J --> L
+    K --> L
+    
+    L --> M[Portfolio Tracking]
+    M --> N[Performance Analytics]
+    N --> O[Risk Monitoring]
+    
+    O --> P{Risk Limits OK?}
+    P -->|Yes| Q[Continue Betting]
+    P -->|No| R[Stop Loss Triggered]
+    
+    Q --> S[Advanced Analytics]
+    S --> T[Strategy Optimization]
+    T --> U[Report Generation]
+    
+    style A fill:#e1f5fe
+    style C fill:#f3e5f5
+    style E fill:#fff3e0
+    style G fill:#e8f5e8
+    style M fill:#fce4ec
+    style S fill:#f1f8e9
+```
+
+## 🚀 **Getting Started with Betting Intelligence**
+
+### **1. Installation**
+```bash
+# Install betting intelligence requirements
+pip install -r requirements_betting.txt
+
+# Basic setup
+from betting_intelligence import *
+
+# Initialize core components
+portfolio = PortfolioTracker()
+kelly = KellyCalculator()
+risk_manager = RiskManager()
+analyzer = BettingAnalyzer()
+```
+
+### **2. Basic Workflow**
+```python
+# 1. Analyze opportunity
+opportunity = {
+    'match_info': {'home_team': 'Team A', 'away_team': 'Team B'},
+    'probability': 0.65,
+    'odds': 2.1,
+    'bet_type': 'Home'
+}
+
+analysis = analyzer.analyze_betting_opportunity(opportunity, bankroll=1000.0)
+
+# 2. Check recommendation
+if analysis['recommendation']['overall'] == 'RECOMMENDED':
+    # 3. Add to portfolio
+    bet_id = portfolio.add_bet(**opportunity)
+    
+    # 4. Monitor and settle
+    # ... (after match)
+    portfolio.settle_bet(bet_id, 'won')
+
+# 5. Analyze performance
+summary = portfolio.get_portfolio_summary()
+```
+
+### **3. Advanced Usage**
+```python
+# Complete betting intelligence pipeline
+from betting_intelligence import *
+
+# Initialize system
+system = {
+    'portfolio': PortfolioTracker(),
+    'kelly': KellyCalculator(),
+    'risk': RiskManager(),
+    'arbitrage': ArbitrageDetector(),
+    'analytics': AdvancedAnalytics(),
+    'auto_betting': AutoBettingSystem(),
+    'ml_model': AdvancedFootballModel(),
+    'analyzer': BettingAnalyzer()
+}
+
+# Train ML model
+system['ml_model'].train_models(historical_data)
+
+# Configure auto-betting
+system['auto_betting'].configure_system(
+    mode=AutoBettingMode.SEMI_AUTO,
+    daily_profit_target=100.0
+)
+
+# Analyze opportunities
+for opportunity in daily_opportunities:
+    analysis = system['analyzer'].analyze_betting_opportunity(
+        opportunity, bankroll, bookmaker_odds
+    )
+    
+    if analysis['recommendation']['overall'] == 'RECOMMENDED':
+        system['auto_betting'].add_bet_to_queue(**opportunity)
+
+# Generate reports
+report = system['analyzer'].generate_betting_report(bankroll)
+```
+
+## 📊 **Performance Metrics**
+
+The Betting Intelligence system tracks comprehensive metrics:
+
+- **📈 ROI Analysis:** Real-time return calculations
+- **🎯 Accuracy Tracking:** Prediction vs actual results
+- **💰 Profit/Loss:** Detailed P&L statements
+- **📉 Drawdown Monitoring:** Risk exposure tracking
+- **⚡ Execution Efficiency:** Auto-betting performance
+- **🔍 Value Detection:** Market inefficiency identification
+
+---
+
+# 🤖 AI-Powered Insights & Analysis Workflow
+
+```mermaid
+graph TD
+    A[User Query/Data] --> B{Analysis Type}
+    
+    B -->|Team Analysis| C[Data Analyzer]
+    B -->|Prediction Help| D[Prediction Explainer]
+    B -->|Market Analysis| E[Market Analyzer]
+    B -->|Report Request| F[Report Generator]
+    B -->|Chat Query| G[Chat Assistant]
+    
+    C --> H[OpenAI GPT-4]
+    D --> H
+    E --> H
+    F --> H
+    G --> H
+    
+    H --> I[AI Processing]
+    I --> J[Context Analysis]
+    J --> K[Intelligent Response]
+    
+    K --> L{Response Type}
+    L -->|Analysis| M[Team Insights]
+    L -->|Explanation| N[Prediction Reasoning]
+    L -->|Market Intel| O[Betting Opportunities]
+    L -->|Report| P[Executive Summary]
+    L -->|Conversation| Q[Natural Language Response]
+    
+    M --> R[User Interface]
+    N --> R
+    O --> R
+    P --> R
+    Q --> R
+    
+    style A fill:#e3f2fd
+    style H fill:#f3e5f5
+    style I fill:#fff3e0
+    style R fill:#e8f5e8
+```
+
+---
+
 # 📸 Visual Interface & Features Documentation
 
 ## Stunning Graphical Interface
