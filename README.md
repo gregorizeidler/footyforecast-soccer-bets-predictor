@@ -148,20 +148,28 @@ flowchart TD
     Z2 --> CC[📋 Batch Predictions]
     CC --> DD[💰 Betting Recommendations]
     
-    style A fill:#FF6B6B,stroke:#FF4757,stroke-width:3px,color:#fff
-    style J fill:#4ECDC4,stroke:#26D0CE,stroke-width:3px,color:#fff
-    style T fill:#45B7D1,stroke:#3742FA,stroke-width:3px,color:#fff
-    style Y fill:#96CEB4,stroke:#00B894,stroke-width:3px,color:#fff
-    style DD fill:#FECA57,stroke:#FF9F43,stroke-width:3px,color:#fff
+    style A fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#FFFFFF
+    style B fill:#FF9800,stroke:#E65100,stroke-width:4px,color:#FFFFFF
+    style C fill:#2196F3,stroke:#1565C0,stroke-width:3px,color:#FFFFFF
+    style D fill:#9C27B0,stroke:#6A1B9A,stroke-width:3px,color:#FFFFFF
+    style E fill:#F44336,stroke:#C62828,stroke-width:3px,color:#FFFFFF
+    style J fill:#607D8B,stroke:#37474F,stroke-width:4px,color:#FFFFFF
+    style K fill:#795548,stroke:#4E342E,stroke-width:3px,color:#FFFFFF
+    style T fill:#E91E63,stroke:#AD1457,stroke-width:4px,color:#FFFFFF
+    style U fill:#FF5722,stroke:#D84315,stroke-width:3px,color:#FFFFFF
+    style V fill:#3F51B5,stroke:#283593,stroke-width:3px,color:#FFFFFF
+    style W fill:#009688,stroke:#00695C,stroke-width:4px,color:#FFFFFF
+    style Y fill:#8BC34A,stroke:#558B2F,stroke-width:4px,color:#FFFFFF
+    style DD fill:#FFEB3B,stroke:#F57F17,stroke-width:3px,color:#000000
     
-    style L fill:#FF7675,stroke:#D63031,stroke-width:2px,color:#fff
-    style M fill:#74B9FF,stroke:#0984E3,stroke-width:2px,color:#fff
-    style N fill:#A29BFE,stroke:#6C5CE7,stroke-width:2px,color:#fff
-    style O fill:#55A3FF,stroke:#2D3436,stroke-width:2px,color:#fff
-    style P fill:#FD79A8,stroke:#E84393,stroke-width:2px,color:#fff
-    style Q fill:#FDCB6E,stroke:#E17055,stroke-width:2px,color:#fff
-    style R fill:#6C5CE7,stroke:#A29BFE,stroke-width:2px,color:#fff
-    style S fill:#00B894,stroke:#00CEC9,stroke-width:2px,color:#fff
+    style L fill:#FF7675,stroke:#D63031,stroke-width:3px,color:#FFFFFF
+    style M fill:#74B9FF,stroke:#0984E3,stroke-width:3px,color:#FFFFFF
+    style N fill:#A29BFE,stroke:#6C5CE7,stroke-width:3px,color:#FFFFFF
+    style O fill:#00BCD4,stroke:#0097A7,stroke-width:3px,color:#FFFFFF
+    style P fill:#FD79A8,stroke:#E84393,stroke-width:3px,color:#FFFFFF
+    style Q fill:#FFC107,stroke:#FF8F00,stroke-width:3px,color:#000000
+    style R fill:#673AB7,stroke:#4527A0,stroke-width:3px,color:#FFFFFF
+    style S fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#FFFFFF
 ```
 
 ## 🏗️ System Architecture
@@ -234,12 +242,28 @@ graph TB
     FEATURES --> DB
     MODEL --> CONFIG
     
-    style GUI fill:#FF6B6B,stroke:#FF4757,stroke-width:3px,color:#fff
-    style ML fill:#4ECDC4,stroke:#26D0CE,stroke-width:3px,color:#fff
-    style PREDICT fill:#96CEB4,stroke:#00B894,stroke-width:3px,color:#fff
-    style DB fill:#45B7D1,stroke:#3742FA,stroke-width:3px,color:#fff
-    style FOOTBALL fill:#FECA57,stroke:#FF9F43,stroke-width:3px,color:#fff
-    style FOOTY fill:#FECA57,stroke:#FF9F43,stroke-width:3px,color:#fff
+    style GUI fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#FFFFFF
+    style MENU fill:#2196F3,stroke:#1565C0,stroke-width:3px,color:#FFFFFF
+    style DIALOG fill:#9C27B0,stroke:#6A1B9A,stroke-width:3px,color:#FFFFFF
+    style ANALYSIS fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#FFFFFF
+    style ML fill:#F44336,stroke:#C62828,stroke-width:4px,color:#FFFFFF
+    style PREDICT fill:#607D8B,stroke:#37474F,stroke-width:4px,color:#FFFFFF
+    style DB fill:#795548,stroke:#4E342E,stroke-width:3px,color:#FFFFFF
+    style MODEL fill:#E91E63,stroke:#AD1457,stroke-width:3px,color:#FFFFFF
+    style CONFIG fill:#FF5722,stroke:#D84315,stroke-width:3px,color:#FFFFFF
+    style FOOTBALL fill:#3F51B5,stroke:#283593,stroke-width:3px,color:#FFFFFF
+    style FOOTY fill:#009688,stroke:#00695C,stroke-width:3px,color:#FFFFFF
+    style PREPROCESS fill:#8BC34A,stroke:#558B2F,stroke-width:3px,color:#FFFFFF
+    style STATS fill:#FFEB3B,stroke:#F57F17,stroke-width:3px,color:#000000
+    style FEATURES fill:#00BCD4,stroke:#0097A7,stroke-width:3px,color:#FFFFFF
+    style DT fill:#FFC107,stroke:#FF8F00,stroke-width:3px,color:#000000
+    style RF fill:#673AB7,stroke:#4527A0,stroke-width:3px,color:#FFFFFF
+    style NN fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#FFFFFF
+    style XGB fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#FFFFFF
+    style SVM fill:#2196F3,stroke:#1565C0,stroke-width:3px,color:#FFFFFF
+    style NB fill:#9C27B0,stroke:#6A1B9A,stroke-width:3px,color:#FFFFFF
+    style LR fill:#F44336,stroke:#C62828,stroke-width:3px,color:#FFFFFF
+    style ENS fill:#607D8B,stroke:#37474F,stroke-width:4px,color:#FFFFFF
 ```
 
 ## 📖 What is FootyForecast?
@@ -1025,12 +1049,27 @@ graph TD
     S --> T[Strategy Optimization]
     T --> U[Report Generation]
     
-    style A fill:#e1f5fe
-    style C fill:#f3e5f5
-    style E fill:#fff3e0
-    style G fill:#e8f5e8
-    style M fill:#fce4ec
-    style S fill:#f1f8e9
+    style A fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#FFFFFF
+    style B fill:#2196F3,stroke:#1565C0,stroke-width:3px,color:#FFFFFF
+    style C fill:#9C27B0,stroke:#6A1B9A,stroke-width:3px,color:#FFFFFF
+    style D fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#FFFFFF
+    style E fill:#F44336,stroke:#C62828,stroke-width:3px,color:#FFFFFF
+    style F fill:#607D8B,stroke:#37474F,stroke-width:3px,color:#FFFFFF
+    style G fill:#795548,stroke:#4E342E,stroke-width:3px,color:#FFFFFF
+    style H fill:#FF5722,stroke:#D84315,stroke-width:4px,color:#FFFFFF
+    style I fill:#3F51B5,stroke:#283593,stroke-width:3px,color:#FFFFFF
+    style J fill:#009688,stroke:#00695C,stroke-width:3px,color:#FFFFFF
+    style K fill:#8BC34A,stroke:#558B2F,stroke-width:3px,color:#FFFFFF
+    style L fill:#FFEB3B,stroke:#F57F17,stroke-width:3px,color:#000000
+    style M fill:#E91E63,stroke:#AD1457,stroke-width:3px,color:#FFFFFF
+    style N fill:#00BCD4,stroke:#0097A7,stroke-width:3px,color:#FFFFFF
+    style O fill:#FFC107,stroke:#FF8F00,stroke-width:3px,color:#000000
+    style P fill:#673AB7,stroke:#4527A0,stroke-width:4px,color:#FFFFFF
+    style Q fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#FFFFFF
+    style R fill:#F44336,stroke:#C62828,stroke-width:3px,color:#FFFFFF
+    style S fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#FFFFFF
+    style T fill:#2196F3,stroke:#1565C0,stroke-width:3px,color:#FFFFFF
+    style U fill:#9C27B0,stroke:#6A1B9A,stroke-width:3px,color:#FFFFFF
 ```
 
 ## 🚀 **Getting Started with Betting Intelligence**
@@ -1162,10 +1201,24 @@ graph TD
     P --> R
     Q --> R
     
-    style A fill:#e3f2fd
-    style H fill:#f3e5f5
-    style I fill:#fff3e0
-    style R fill:#e8f5e8
+    style A fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#FFFFFF
+    style B fill:#FF9800,stroke:#E65100,stroke-width:4px,color:#FFFFFF
+    style C fill:#2196F3,stroke:#1565C0,stroke-width:3px,color:#FFFFFF
+    style D fill:#9C27B0,stroke:#6A1B9A,stroke-width:3px,color:#FFFFFF
+    style E fill:#F44336,stroke:#C62828,stroke-width:3px,color:#FFFFFF
+    style F fill:#607D8B,stroke:#37474F,stroke-width:3px,color:#FFFFFF
+    style G fill:#795548,stroke:#4E342E,stroke-width:3px,color:#FFFFFF
+    style H fill:#E91E63,stroke:#AD1457,stroke-width:4px,color:#FFFFFF
+    style I fill:#FF5722,stroke:#D84315,stroke-width:3px,color:#FFFFFF
+    style J fill:#3F51B5,stroke:#283593,stroke-width:3px,color:#FFFFFF
+    style K fill:#009688,stroke:#00695C,stroke-width:3px,color:#FFFFFF
+    style L fill:#673AB7,stroke:#4527A0,stroke-width:4px,color:#FFFFFF
+    style M fill:#8BC34A,stroke:#558B2F,stroke-width:3px,color:#FFFFFF
+    style N fill:#FFEB3B,stroke:#F57F17,stroke-width:3px,color:#000000
+    style O fill:#00BCD4,stroke:#0097A7,stroke-width:3px,color:#FFFFFF
+    style P fill:#FFC107,stroke:#FF8F00,stroke-width:3px,color:#000000
+    style Q fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#FFFFFF
+    style R fill:#4CAF50,stroke:#2E7D32,stroke-width:4px,color:#FFFFFF
 ```
 
 ---
