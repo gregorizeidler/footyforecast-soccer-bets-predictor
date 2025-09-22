@@ -1,4 +1,4 @@
-# FootyForecast - Soccer Bets Predictor
+# FootyForecast - Soccer Bets Predictor 
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-Open%20Source-green.svg)](LICENSE)
