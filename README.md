@@ -712,13 +712,6 @@ Below are the steps of installing this application to your machine. First, downl
 
 To run `pip` commands, open CMD (windows) using Window Key + R or by typing cmd on the search. In linux, You can use the linux terminal. You can also install multiple libraries at once (e.g. `pip install numpy==1.22.4 pandas==1.4.3 ...`
 
-# Common Errors
-1. `Cannot install tensorflow.` Sometimes, it requires visual studio to be installed. Download the community edition which is free here:  [https://pypi.org/project/py-stringmatching](https://visualstudio.microsoft.com/downloads/)
-2. `pip command was not found` in terminal. In this case, you forgot to choose **add to Path** option during the the installation of python. Delete python and repeat download instructions 1-3.
-3. `File main.py was not found`. This is because when you open command line (cmd) tool on windows, or terminal on linux, the default directory that cmd is looking at is the home directory, not FootyForecast directory. You need to navigate to FootyForecast directory, where the main.py file exists. To do that, you can use the `cd` command. e.g. if FootyForecast is downloaded on "Downloads" folder, then type `cd Downloads/FootyForecast-Soccer-Bets-Predictor` and then type `python main.py`
-4. `python command not found` on linux. This is because python command is `python3` on linux systems
-5. `Parsing date is wrong` when trying to parse fixtures from the html file. The html file has many fixtures. Each fixture has a date. You need to specify the correct date of the fixture you are requesting, so the parser identifies the fixtures from the given date and grab the matches. You need to specify the date before importing the fixture file into program.
-6. `<<library>> module was not found` This means that a library has been installed, but it is not included in the documentation or requirements.txt file. Try to install it via `pip` command or open an issue so that i can update the documentation.
 
 # Supported Platforms
 1. Windows
